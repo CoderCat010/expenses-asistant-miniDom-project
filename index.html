@@ -45,7 +45,7 @@
                     <h2 class="block font-semibold mb-2 text-gray-700">Income 💰</h2>
                     <input id="income" type="number" class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Enter Income"/>
 
-                    <p id="income-error" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Income!</p>
+                    <p id="income-error" class="text-red-500 text-xs mt-1 hidden">⚠️Invalid Income!</p>
                 </div>
 
             <!-- Software Subscriptions Cost -->
@@ -53,7 +53,7 @@
                     <h2 class="block font-semibold mb-2 text-gray-700">Software 💻</h2>
                     <input type="number" id="software" class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Software Cost"/>
 
-                    <p id="software-error" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
+                    <p id="software-error" class="text-red-500 text-xs mt-1 hidden">⚠️Invalid Amount!</p>
                 </div>
 
             <!-- Courses/Books Cost -->
@@ -61,7 +61,7 @@
                     <h2 class="block font-semibold mb-2 text-gray-700">Courses 📚</h2>
                     <input type="number" id="courses" class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Course Cost"/>
 
-                    <p id="courses-error" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
+                    <p id="courses-error" class="text-red-500 text-xs mt-1 hidden">⚠️Invalid Amount!</p>
                 </div>
 
             <!-- Internet Cost -->
@@ -69,7 +69,7 @@
                     <h2 class="block font-semibold mb-2 text-gray-700">Internet 🌐</h2>
                     <input type="number" id="internet" class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Internet Cost"/>
 
-                    <p id="internet-error" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Amount!</p>
+                    <p id="internet-error" class="text-red-500 text-xs mt-1 hidden">⚠️Invalid Amount!</p>
                 </div>
 
             <!-- Calculation Button -->
@@ -80,12 +80,18 @@
                     <h2 class="block font-semibold mb-2 text-gray-700">Savings (%) 💸</h2>
                     <input type="number" id="savings" class="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200" placeholder="Savings %"/>
 
-                    <p id="savings-error" class="text-red-500 text-xs mt-1 hidden">⚠️ Invalid Percentage!</p>
+                    <p id="savings-error" class="text-red-500 text-xs mt-1 hidden">⚠️Invalid Percentage!</p>
                 </div>
 
             <!-- Calculate Savings Button -->
                 <button id="calculate-savings" class="col-span-2 text-white px-4 py-2 rounded-md font-semibold transition-all duration-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 focus:ring-green-500">Calculate Savings</button>
             </div>
+
+
+            <!------------ 
+            Error Messages 
+            ------------->
+            <p id="logic-error" class="text-red-500 mt-4  text-center">⚠️Total expenses cannot exceed your income!</p>
         </div>
 
         <!-- Results History -->
@@ -117,7 +123,7 @@
                 </div>
             </div>
         </div>
-
+        
 
 
 
