@@ -8,23 +8,18 @@ const dashboard = document.getElementById('expense-form');
 
 // income input box
 const incomeInputBox = document.getElementById('income');
-const incomeTextValue = parseFloat(incomeInputBox.value);
 
 // software input box
 const softwareInputBox = document.getElementById('software');
-const softwareTextValue = parseFloat(software.value);
 
 // courses input box
 const coursesInputBox = document.getElementById('courses');
-const coursesTextValue = parseFloat(courses.value);
 
 // internet input box
 const internetInputBox = document.getElementById('internet');
-const coursesTextValue = parseFloat(internet.value);
 
 // savings" input box
 const savingsInputBox = document.getElementById('savings');
-const savingsTextValue = parseFloat(savings.value);
 
 
 // error massages
