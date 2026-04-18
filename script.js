@@ -43,7 +43,27 @@ const historyList = document.getElementById('history-list');
 
 // results section 
 const resultsSection = document.getElementById('results');
-const totalExpenses = document.getElementById('total-expenses');
-const totalBalance = document.getElementById('balance');
-const totalSavingsAmount = document.getElementById('savings-amount');
-const remainingbalance = document.getElementById('remaining-balance');
+const totalExpensesBtn = document.getElementById('total-expenses');
+const totalBalanceBtn = document.getElementById('balance');
+const totalSavingsAmountBtn = document.getElementById('savings-amount');
+const remainingbalanceBtn = document.getElementById('remaining-balance');
+
+
+//-----> add event listener on total calculation button to calculate each one input values.
+totalCalculationBtn.addEventListener('click', function(){
+    // get all input box values
+    const incomeValue = parseFloat(incomeInputBox.value);
+    const softwareValue = parseFloat(softwareInputBox.value);
+    const coursesValue = parseFloat(coursesInputBox.value);
+    const internetValue = parseFloat(internetInputBox.value);
+    // const savingsValue = parseFloat(savingsInputBox.value); 
+    
+
+    // calculate each one input values
+    const totalExpenses = softwareValue + coursesValue + internetValue;
+    const mainBalance = incomeValue - totalExpenses;
+
+    // show on results history
+    totalExpensesBtn.textContent = totalExpenses.toFixed(2);
+    totalBalanceBtn.textContent = mainBalance;
+})
