@@ -58,10 +58,10 @@
 
 
 // input box validation
-function inputValidation(inputValue, errorMsg, parseFloatValue){
+function inputValidation(inputValue, errorMsg, parseFloat){
     if(inputValue === ''){
         errorMsg.style.display = 'none';
-    }else if (isNaN(inputValue) || parseFloatValue <= 0) {
+    }else if (isNaN(inputValue) || parseFloat <= 0) {
         errorMsg.style.display = 'block';
     }else {
         errorMsg.style.display = 'none';
@@ -75,16 +75,16 @@ incomeInputBox.addEventListener('input', function(){
 
 softwareInputBox.addEventListener('input', function(){
     const value = allinputBoxValues();
-    inputValidation(softwareInputBox.value, softwareErrorMsg, value.incomeValue);
+    inputValidation(softwareInputBox.value, softwareErrorMsg, value.softwareValue);
 });
 
 coursesInputBox.addEventListener('input', function(){
     const value = allinputBoxValues();
-    inputValidation(coursesInputBox.value, coursesErrorMsg, value.incomeValue);
+    inputValidation(coursesInputBox.value, coursesErrorMsg, value.coursesValue);
 });
 
 internetInputBox.addEventListener('input', function(){
     const value = allinputBoxValues();
-    inputValidation(internetInputBox.value, internetErrorMsg, value.incomeValue);
+    inputValidation(internetInputBox.value, internetErrorMsg, value.internetValue);
 })
 
