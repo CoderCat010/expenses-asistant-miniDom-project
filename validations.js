@@ -1,0 +1,61 @@
+// //-----> income input box validation
+// incomeInputBox.addEventListener('input', function () {
+//     const value = allinputBoxValues();
+//     const incomeInputValue = incomeInputBox.value;
+
+//     if(incomeInputValue === ''){
+//         incomeErrorMsg.style.display = 'none';
+//     }else if (isNaN(incomeInputValue) || value.incomeValue <= 0) {
+//         incomeErrorMsg.style.display = 'block';
+//     }else {
+//         incomeErrorMsg.style.display = 'none';
+//     }
+// });
+
+// //-----> software input box validation
+// softwareInputBox.addEventListener('input', function () {
+//     const value = allinputBoxValues();
+//     const softwareInputValue = softwareInputBox.value;
+
+//     if(softwareInputValue === ''){
+//         softwareErrorMsg.style.display = 'none';
+//     }else if (isNaN(softwareInputValue) || value.softwareValue <= 0) {
+//         softwareErrorMsg.style.display = 'block';
+//     }else {
+//         softwareErrorMsg.style.display = 'none';
+//     }
+// });
+
+
+// //-----> courses input box validation
+// coursesInputBox.addEventListener('input', function () {
+//     const value = allinputBoxValues();
+//     const coursesInputValue = coursesInputBox.value;
+
+//     if(coursesInputValue === ''){
+//         coursesErrorMsg.style.display = 'none';
+//     }else if (isNaN(coursesInputValue) || value.coursesValue <= 0) {
+//         coursesErrorMsg.style.display = 'block';
+//     }else {
+//         coursesErrorMsg.style.display = 'none';
+//     }
+// });
+
+
+// //-----> internet input box validation
+// internetInputBox.addEventListener('input', function () {
+//     const value = allinputBoxValues();
+//     const internetInputValue = internetInputBox.value;
+
+//     if(internetInputValue === ''){
+//         internetErrorMsg.style.display = 'none';
+//     }else if (isNaN(internetInputValue) || value.internetValue <= 0) {
+//         internetErrorMsg.style.display = 'block';
+//     }else {
+//         internetErrorMsg.style.display = 'none';
+//     }
+// });
+
+
+// 
+

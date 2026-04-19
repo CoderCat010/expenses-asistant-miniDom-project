@@ -49,21 +49,33 @@ const totalSavingsAmountBtn = document.getElementById('savings-amount');
 const remainingbalanceBtn = document.getElementById('remaining-balance');
 
 
-//-----> add event listener on total calculation button to calculate each one input values.
-totalCalculationBtn.addEventListener('click', function(){
+//-----> each one input values
+function allinputBoxValues(){
     // get all input box values
     const incomeValue = parseFloat(incomeInputBox.value);
     const softwareValue = parseFloat(softwareInputBox.value);
     const coursesValue = parseFloat(coursesInputBox.value);
     const internetValue = parseFloat(internetInputBox.value);
     // const savingsValue = parseFloat(savingsInputBox.value); 
-    
+
+    return {incomeValue, softwareValue, coursesValue, internetValue};
+}
+
+
+//-----> add event listener on total calculation button to calculate each one input values.
+totalCalculationBtn.addEventListener('click', function(){
+    // call the input values function
+    const inputValues = allinputBoxValues();
 
     // calculate each one input values
-    const totalExpenses = softwareValue + coursesValue + internetValue;
-    const mainBalance = incomeValue - totalExpenses;
+    const totalExpenses = inputValues.softwareValue + inputValues.coursesValue + inputValues.internetValue;
+    const mainBalance = inputValues.incomeValue - totalExpenses;
 
     // show on results history
     totalExpensesBtn.textContent = totalExpenses.toFixed(2);
-    totalBalanceBtn.textContent = mainBalance;
+    totalBalanceBtn.textContent = mainBalance.toFixed(2);
+
 })
+
+
+
