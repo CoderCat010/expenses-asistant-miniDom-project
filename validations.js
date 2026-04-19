@@ -57,5 +57,34 @@
 // });
 
 
-// 
+// input box validation
+function inputValidation(inputValue, errorMsg, parseFloatValue){
+    if(inputValue === ''){
+        errorMsg.style.display = 'none';
+    }else if (isNaN(inputValue) || parseFloatValue <= 0) {
+        errorMsg.style.display = 'block';
+    }else {
+        errorMsg.style.display = 'none';
+    }
+}
+
+incomeInputBox.addEventListener('input', function(){
+    const value = allinputBoxValues();
+    inputValidation(incomeInputBox.value, incomeErrorMsg, value.incomeValue);
+});
+
+softwareInputBox.addEventListener('input', function(){
+    const value = allinputBoxValues();
+    inputValidation(softwareInputBox.value, softwareErrorMsg, value.incomeValue);
+});
+
+coursesInputBox.addEventListener('input', function(){
+    const value = allinputBoxValues();
+    inputValidation(coursesInputBox.value, coursesErrorMsg, value.incomeValue);
+});
+
+internetInputBox.addEventListener('input', function(){
+    const value = allinputBoxValues();
+    inputValidation(internetInputBox.value, internetErrorMsg, value.incomeValue);
+})
 
