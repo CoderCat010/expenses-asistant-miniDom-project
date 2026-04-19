@@ -1,3 +1,5 @@
+let globalBalance;
+
 // get assistant tab and history tab
 const assistantTab = document.getElementById('assistant-tab');
 const historyTab = document.getElementById('history-tab');
@@ -56,9 +58,9 @@ function allinputBoxValues(){
     const softwareValue = parseFloat(softwareInputBox.value);
     const coursesValue = parseFloat(coursesInputBox.value);
     const internetValue = parseFloat(internetInputBox.value);
-    // const savingsValue = parseFloat(savingsInputBox.value); 
+    const savingsValue = parseFloat(savingsInputBox.value); 
 
-    return {incomeValue, softwareValue, coursesValue, internetValue};
+    return {incomeValue, softwareValue, coursesValue, internetValue, savingsValue};
 }
 
 
@@ -67,15 +69,24 @@ totalCalculationBtn.addEventListener('click', function(){
     // call the input values function
     const inputValues = allinputBoxValues();
 
-    // calculate each one input values
-    const totalExpenses = inputValues.softwareValue + inputValues.coursesValue + inputValues.internetValue;
-    const mainBalance = inputValues.incomeValue - totalExpenses;
+    // input box validation [from validation.js file]
+    function inputValidation(inputValue, errorMsg, parseValue){
+    if(inputValue === ''){
+        errorMsg.style.display = 'none';
+    }else if (isNaN(inputValue) || parseValue <= 0) {
+        errorMsg.style.display = 'block';
+    }else {
+        // calculate each one input values
+        const totalExpenses = inputValues.softwareValue + inputValues.coursesValue + inputValues.internetValue;
+        globalBalance = inputValues.incomeValue - totalExpenses;
 
-    // show on results history
-    totalExpensesBtn.textContent = totalExpenses.toFixed(2);
-    totalBalanceBtn.textContent = mainBalance.toFixed(2);
-
+        // show on results history
+        totalExpensesBtn.textContent = totalExpenses.toFixed(2);
+        totalBalanceBtn.textContent = globalBalance.toFixed(2);
+    }
+}
 })
+
 
 
 

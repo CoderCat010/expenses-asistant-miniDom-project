@@ -58,16 +58,17 @@
 
 
 // input box validation
-function inputValidation(inputValue, errorMsg, parseFloat){
+function inputValidation(inputValue, errorMsg, parseValue){
     if(inputValue === ''){
         errorMsg.style.display = 'none';
-    }else if (isNaN(inputValue) || parseFloat <= 0) {
+    }else if (isNaN(inputValue) || parseValue <= 0) {
         errorMsg.style.display = 'block';
     }else {
         errorMsg.style.display = 'none';
     }
 }
 
+// [from script.js file]
 incomeInputBox.addEventListener('input', function(){
     const value = allinputBoxValues();
     inputValidation(incomeInputBox.value, incomeErrorMsg, value.incomeValue);
