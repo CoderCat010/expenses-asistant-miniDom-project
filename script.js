@@ -68,24 +68,26 @@ function allinputBoxValues(){
 totalCalculationBtn.addEventListener('click', function(){
     // call the input values function
     const inputValues = allinputBoxValues();
+    
+    if(incomeInputBox.value === '' || softwareInputBox.value === '' || coursesInputBox.value === '' || internetInputBox.value === '') return;
 
-    // input box validation [from validation.js file]
-    function inputValidation(inputValue, errorMsg, parseValue){
-    if(inputValue === ''){
-        errorMsg.style.display = 'none';
-    }else if (isNaN(inputValue) || parseValue <= 0) {
-        errorMsg.style.display = 'block';
-    }else {
-        // calculate each one input values
-        const totalExpenses = inputValues.softwareValue + inputValues.coursesValue + inputValues.internetValue;
-        globalBalance = inputValues.incomeValue - totalExpenses;
+    // calculate each one input values
+    const totalExpenses = inputValues.softwareValue + inputValues.coursesValue + inputValues.internetValue;
+    globalBalance = inputValues.incomeValue - totalExpenses;
 
-        // show on results history
-        totalExpensesBtn.textContent = totalExpenses.toFixed(2);
-        totalBalanceBtn.textContent = globalBalance.toFixed(2);
-    }
-}
+    // show on results history
+    totalExpensesBtn.textContent = totalExpenses.toFixed(2);
+    totalBalanceBtn.textContent = globalBalance.toFixed(2);
 })
+
+
+
+
+
+
+
+
+
 
 
 
