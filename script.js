@@ -50,6 +50,17 @@ const totalBalanceBtn = document.getElementById('balance');
 const totalSavingsAmountBtn = document.getElementById('savings-amount');
 const remainingbalanceBtn = document.getElementById('remaining-balance');
 
+assistantTab.addEventListener('click', function(){
+    dashboard.classList.remove('hidden');
+    historySection.classList.add('hidden');
+
+    // add class list to style on history tab button
+    assistantTab.classList.add('text-white', 'bg-gradient-to-r', 'from-blue-500', 'to-purple-600');
+
+    // remove history tab button style 
+    historyTab.classList.remove('text-white', 'bg-gradient-to-r', 'from-blue-500', 'to-purple-600');
+});
+
 
 //-----> each one input values
 function allinputBoxValues(){
@@ -95,6 +106,13 @@ savingsCalculationBtn.addEventListener('click', function(){
   // get remining balance and update current balance 
     const updatedBalance = globalBalance - savingsAmount;
     remainingbalanceBtn.textContent = updatedBalance.toFixed(2);
+
+    // restart the page again to add new values again
+    incomeInputBox.value = '';
+    softwareInputBox.value = '';
+    coursesInputBox.value = '';
+    internetInputBox.value = '';
+    savingsInputBox.value = '';
 })
 
 
