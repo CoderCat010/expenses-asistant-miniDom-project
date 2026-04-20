@@ -88,9 +88,15 @@ totalCalculationBtn.addEventListener('click', function(){
 
     if(totalExpenses > inputValues.incomeValue){
         logicErrorMsg.classList.remove('hidden');
+        // restart the page again to add new values again
+        incomeInputBox.value = '';
+        softwareInputBox.value = '';
+        coursesInputBox.value = '';
+        internetInputBox.value = '';
         return;
     }
 
+    logicErrorMsg.classList.add('hidden');
     // show on results history
     totalExpensesBtn.textContent = totalExpenses.toFixed(2);
     totalBalanceBtn.textContent = globalBalance.toFixed(2);
