@@ -81,7 +81,21 @@ totalCalculationBtn.addEventListener('click', function(){
 })
 
 
+//-----> add event listener on saving button
+savingsCalculationBtn.addEventListener('click', function(){
+    // call the input values function
+    const inputValues = allinputBoxValues();
 
+    if(incomeInputBox.value === '' || softwareInputBox.value === '' || coursesInputBox.value === '' || internetInputBox.value === '' || savingsInputBox.value === '') return;
+
+    // calculate total savings ammout 
+    const savingsAmount = (inputValues.savingsValue * globalBalance) / 100;
+    totalSavingsAmountBtn.textContent = savingsAmount;
+    
+  // get remining balance and update current balance 
+    const updatedBalance = globalBalance - savingsAmount;
+    remainingbalanceBtn.textContent = updatedBalance.toFixed(2);
+})
 
 
 
