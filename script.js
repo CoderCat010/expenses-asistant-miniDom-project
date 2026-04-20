@@ -86,6 +86,11 @@ totalCalculationBtn.addEventListener('click', function(){
     const totalExpenses = inputValues.softwareValue + inputValues.coursesValue + inputValues.internetValue;
     globalBalance = inputValues.incomeValue - totalExpenses;
 
+    if(totalExpenses > inputValues.incomeValue){
+        logicErrorMsg.classList.remove('hidden');
+        return;
+    }
+
     // show on results history
     totalExpensesBtn.textContent = totalExpenses.toFixed(2);
     totalBalanceBtn.textContent = globalBalance.toFixed(2);
@@ -101,7 +106,7 @@ savingsCalculationBtn.addEventListener('click', function(){
 
     // calculate total savings ammout 
     const savingsAmount = (inputValues.savingsValue * globalBalance) / 100;
-    totalSavingsAmountBtn.textContent = savingsAmount;
+    totalSavingsAmountBtn.textContent = savingsAmount.toFixed(2);
     
   // get remining balance and update current balance 
     const updatedBalance = globalBalance - savingsAmount;
