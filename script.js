@@ -100,6 +100,21 @@ totalCalculationBtn.addEventListener('click', function(){
     // show on results history
     totalExpensesBtn.textContent = totalExpenses.toFixed(2);
     totalBalanceBtn.textContent = globalBalance.toFixed(2);
+
+    // show on history on history tab
+    const historyItems = document.createElement('div');
+    // div style
+    historyItems.className = 'bg-white p-4 rounded-md border-l-2 border-indigo-500';
+    // history
+    historyItems.innerHTML = `
+    <p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+    <p class="text-xs text-gray-500">income: $${inputValues.incomeValue.toFixed(2)}</p>
+    <p class="text-xs text-gray-500">expenses: $${totalExpenses.toFixed(2)}</p>
+    <p class="text-xs text-gray-500">balance: $${globalBalance.toFixed(2)}</p>
+    `;
+    
+    // append to the history list of histroy section
+    historyList.insertBefore(historyItems, historyList.firstChild);
 })
 
 
@@ -115,7 +130,7 @@ savingsCalculationBtn.addEventListener('click', function(){
     totalSavingsAmountBtn.textContent = savingsAmount.toFixed(2);
     
   // get remining balance and update current balance 
-    const updatedBalance = globalBalance - savingsAmount;
+    const updatedBalance = savingsAmount - globalBalance;
     remainingbalanceBtn.textContent = updatedBalance.toFixed(2);
 
     // restart the page again to add new values again
