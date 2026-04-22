@@ -50,6 +50,8 @@ const totalBalanceBtn = document.getElementById('balance');
 const totalSavingsAmountBtn = document.getElementById('savings-amount');
 const remainingbalanceBtn = document.getElementById('remaining-balance');
 
+
+//-----> tab switch
 assistantTab.addEventListener('click', function(){
     dashboard.classList.remove('hidden');
     historySection.classList.add('hidden');
@@ -115,7 +117,7 @@ totalCalculationBtn.addEventListener('click', function(){
     
     // append to the history list of histroy section
     historyList.insertBefore(historyItems, historyList.firstChild);
-})
+});
 
 
 //-----> add event listener on saving button
@@ -139,14 +141,4 @@ savingsCalculationBtn.addEventListener('click', function(){
     coursesInputBox.value = '';
     internetInputBox.value = '';
     savingsInputBox.value = '';
-})
-
-
-
-
-
-
-
-
-
-
+});

@@ -87,5 +87,10 @@ coursesInputBox.addEventListener('input', function(){
 internetInputBox.addEventListener('input', function(){
     const value = allinputBoxValues();
     inputValidation(internetInputBox.value, internetErrorMsg, value.internetValue);
-})
+});
+
+savingsInputBox.addEventListener('input', function(){
+    const value = allinputBoxValues();
+    inputValidation(savingsInputBox.value, savingsErrorMsg, value.savingsValue);
+});
 
