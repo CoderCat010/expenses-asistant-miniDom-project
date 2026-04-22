@@ -130,7 +130,7 @@ savingsCalculationBtn.addEventListener('click', function(){
     totalSavingsAmountBtn.textContent = savingsAmount.toFixed(2);
     
   // get remining balance and update current balance 
-    const updatedBalance = savingsAmount - globalBalance;
+    const updatedBalance = globalBalance - savingsAmount;
     remainingbalanceBtn.textContent = updatedBalance.toFixed(2);
 
     // restart the page again to add new values again
